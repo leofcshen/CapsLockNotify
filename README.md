@@ -38,3 +38,10 @@ A lightweight program that notifies you when the Caps Lock state changes on Wind
 
 
 
+
+
+
+
+
+
+

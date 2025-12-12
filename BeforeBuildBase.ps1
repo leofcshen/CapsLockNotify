@@ -9,31 +9,32 @@ function Invoke-BeforeBuild {
   Write-Host "執行前置作業..."
   cd ..
 
+  
+
   # 讀取要共用的 README 檔案內容
   $mdShareContent = Get-Content -Path "./README.Share.md" -Raw
-  
-  # 讀取 README.md
-  $readmePath = "README.md"
-  $readmeText = Get-Content $readmePath -Raw
+
+  Invoke-RebuildMD "README.md" $mdShareContent
+  Invoke-RebuildMD "README.zh-tw.md" $mdShareContent
+}
+
+function Invoke-RebuildMD {
+  param (
+    [string]$fileName,
+    [string]$shareContent
+  )
+
+  # 讀取內容  
+  $readmeText = Get-Content $fileName -Raw
   
   # 用正則取代 <!-- share_start --> 到 <!-- share_end --> 之間的內容
   $pattern = '(?s)(<!-- share_start -->).*?(<!-- share_end -->)'
-  $replacement = "`$1`n$mdShareContent`n`$2"
+  $replacement = "`$1`n$shareContent`n`$2"
   $newReadme = [regex]::Replace($readmeText, $pattern, $replacement)
-  
-  # 寫回 README.md
-  Set-Content $readmePath -Value $newReadme
 
-
-  # 讀取 README.zh-tw.md
-  $readmePath = "README.zh-tw.md"
-  $readmeText = Get-Content $readmePath -Raw
+  # 統一行尾符號為 CRLF
+  $newReadme = [regex]::Replace($newReadme, "\r\n|\r|\n", "`r`n")
   
-  # 用正則取代 <!-- share_start --> 到 <!-- share_end --> 之間的內容
-  $pattern = '(?s)(<!-- share_start -->).*?(<!-- share_end -->)'
-  $replacement = "`$1`n$mdShareContent`n`$2"
-  $newReadme = [regex]::Replace($readmeText, $pattern, $replacement)
-  
-  # 寫回 README.zh-tw.md
-  Set-Content $readmePath -Value $newReadme
+  # 寫回檔案
+  Set-Content $fileName -Value $newReadme
 }
