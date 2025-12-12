@@ -35,13 +35,3 @@ A lightweight program that notifies you when the Caps Lock state changes on Wind
 	![](Images/WindowsToast_Off.png)
 
 	![](Images/WindowsToast_On.png)
-
-
-
-
-
-
-
-
-
-

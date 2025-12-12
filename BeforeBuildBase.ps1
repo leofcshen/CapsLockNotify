@@ -34,6 +34,9 @@ function Invoke-RebuildMD {
 
   # 参︽Ю才腹 CRLF
   $newReadme = [regex]::Replace($newReadme, "\r\n|\r|\n", "`r`n")
+
+  # 簿埃程緇传︽
+  $newReadme = $newReadme.TrimEnd("`r", "`n")
   
   # 糶郎
   Set-Content $fileName -Value $newReadme

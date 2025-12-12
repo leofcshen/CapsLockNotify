@@ -35,8 +35,3 @@
 	![](Images/WindowsToast_Off.png)
 
 	![](Images/WindowsToast_On.png)
-
-
-
-
-
