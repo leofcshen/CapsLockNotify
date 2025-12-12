@@ -1,6 +1,13 @@
-# CapsLockNotify
+<p align="center">
+  <img src="https://raw.githubusercontent.com/leofcshen/CapsLockNotify/main/CapsLockNotify/Resources/capslock_off.ico" alt="Logo" width="150" height="150" />
+</p>
+<h1 align="center">CapsLockNotify</h1>
+
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
-[![zh-tw](https://img.shields.io/badge/lang-zh-red.svg)](README.zh-tw.md)
+[![zh](https://img.shields.io/badge/lang-zh-blue.svg)](README.zh-tw.md)
+
+<a href="https://github.com/leofcshen/CapsLockNotify/"><img alt="Last commit" src="https://img.shields.io/github/last-commit/leofcshen/CapsLockNotify?style=for-the-badge" height="20"/></a>
+<a href="https://github.com/leofcshen/CapsLockNotify/blob/main/LICENSE"><img alt="Latest version" src="https://img.shields.io/github/license/leofcshen/CapsLockNotify?style=for-the-badge" height="20"/></a>
 
 A lightweight program that notifies you when the Caps Lock state changes on Windows.
 
