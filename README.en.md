@@ -1,14 +1,14 @@
 # CapsLockNotify
 
-## 功能說明
+## Function Gulid
 
-1. 在 Windows 系統匣中新增一個圖示，反應 `Caps Lock` 和 `Shift` 鍵的目前狀態。
+1. 在 System Tray 顯示當前 Caps Lock 狀態。
 
 	![](Images/SystemTray_Off.png)
 
 	![](Images/SystemTray_On.png)
 
-2. 當 Caps Lock 改變時右下跳出 Windows 桌面通知。
+2. 當 Caps Lock 觸發變換時右下跳出 Windows 桌面通知。
  
 	![](Images/WindowsToast_Off.png)
 
