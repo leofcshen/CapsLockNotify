@@ -1,4 +1,3 @@
-<!-- share_start -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/leofcshen/CapsLockNotify/main/CapsLockNotify/Resources/capslock_off.ico" alt="Logo" width="150" height="150" />
 </p>
@@ -16,25 +15,20 @@
 <a href="https://github.com/leofcshen/CapsLockNotify/blob/main/LICENSE"><img alt="Latest version" src="https://img.shields.io/github/license/leofcshen/CapsLockNotify?style=for-the-badge" height="20"/></a>
 <!-- </p> -->
 
-<!-- share_end -->
+# 說明
 
-# Description
+對 Caps Lock 狀態變更發出通知的輕量級 Windows 工具。
 
-A lightweight program that notifies you when the Caps Lock state changes on Windows.
+# 主要功能
 
-# Main Features
-
-1. Adds an icon into Windows' systray to reflect the current states of the `Caps Lock` and `Shift` keys.
+1. 在 Windows 系統匣中新增一個圖示，反應 `Caps Lock` 和 `Shift` 鍵的目前狀態。
 
 	![](Images/SystemTray_Off.png)
 
 	![](Images/SystemTray_On.png)
 
-2. Show Windows toast when `Caps Lock` changed.
+2. 當 Caps Lock 改變時右下跳出 Windows 桌面通知。
  
 	![](Images/WindowsToast_Off.png)
 
 	![](Images/WindowsToast_On.png)
-
-
-

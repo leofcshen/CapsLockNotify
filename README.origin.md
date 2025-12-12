@@ -1,4 +1,3 @@
-<!-- share_start -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/leofcshen/CapsLockNotify/main/CapsLockNotify/Resources/capslock_off.ico" alt="Logo" width="150" height="150" />
 </p>
@@ -15,8 +14,6 @@
 <a href="https://github.com/leofcshen/CapsLockNotify/releases"><img alt="Latest version" src="https://img.shields.io/github/v/tag/leofcshen/CapsLockNotify?label=Latest%20Version&style=for-the-badge" height="20"/></a>
 <a href="https://github.com/leofcshen/CapsLockNotify/blob/main/LICENSE"><img alt="Latest version" src="https://img.shields.io/github/license/leofcshen/CapsLockNotify?style=for-the-badge" height="20"/></a>
 <!-- </p> -->
-
-<!-- share_end -->
 
 # Description
 
@@ -35,6 +32,3 @@ A lightweight program that notifies you when the Caps Lock state changes on Wind
 	![](Images/WindowsToast_Off.png)
 
 	![](Images/WindowsToast_On.png)
-
-
-

@@ -2,8 +2,10 @@
   <Folder Name="/方案項目/">
     <File Path=".editorconfig" />
     <File Path=".gitignore" />
+    <File Path="BeforeBuildBase.ps1" />
     <File Path="LICENSE" />
     <File Path="README.md" />
+    <File Path="README.Share.md" />
     <File Path="README.zh-tw.md" />
   </Folder>
   <Project Path="CapsLockNotify/CapsLockNotify.csproj" />

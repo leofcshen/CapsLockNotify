@@ -50,5 +50,10 @@
       SourceFiles="@(PublishedExe)"
       DestinationFiles="$(PublishDir)$(NewExeName)" />
   </Target>
+  
+  
+  <Target Name="RunBeforeBuild" BeforeTargets="BeforeBuild">
+    <Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(ProjectDir)BeforeBuild.ps1&quot;" />
+  </Target>
 
 </Project>
