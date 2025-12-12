@@ -3,8 +3,8 @@
     <File Path=".editorconfig" />
     <File Path=".gitignore" />
     <File Path="LICENSE" />
-    <File Path="README.en.md" />
     <File Path="README.md" />
+    <File Path="README.zh-tw.md" />
   </Folder>
   <Project Path="CapsLockNotify/CapsLockNotify.csproj" />
 </Solution>
