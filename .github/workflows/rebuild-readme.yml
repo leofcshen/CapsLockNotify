@@ -36,4 +36,4 @@ jobs:
 
         git add README.md README.zh-TW.md
         git diff --cached --quiet || git commit -m "chore: rebuild README"
-        git push
+        git push https://${{ secrets.BUILD_REPO_TOKEN }}@github.com/leofcshen/CapsLockNotify.git HEAD:main
