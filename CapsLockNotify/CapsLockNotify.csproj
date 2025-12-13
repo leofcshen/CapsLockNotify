@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
 
     <Version>1.0.0</Version>
-    <ApplicationIcon>Resources\capslock_off.ico</ApplicationIcon>
+    <ApplicationIcon>assets\icons\capslock_off.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
@@ -46,14 +46,7 @@
 
     <Message Text="Renaming: %(PublishedExe.Identity) → $(NewExeName)" Importance="high" />
 
-    <Move
-      SourceFiles="@(PublishedExe)"
-      DestinationFiles="$(PublishDir)$(NewExeName)" />
-  </Target>
-  
-  <!-- 建置前呼叫 .ps1 重組 .md 共用的部份 -->
-  <Target Name="RunBeforeBuild" BeforeTargets="BeforeBuild">
-    <Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(ProjectDir)BeforeBuild.ps1&quot;" />
+    <Move SourceFiles="@(PublishedExe)" DestinationFiles="$(PublishDir)$(NewExeName)" />
   </Target>
 
 </Project>

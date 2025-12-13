@@ -1,6 +1,6 @@
 ﻿using Microsoft.Toolkit.Uwp.Notifications;
 
-namespace CapsLockNotify;
+namespace CapsLockNotify.Models;
 
 public partial class SV_Windows {
   /// <summary>

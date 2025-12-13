@@ -1,0 +1,7 @@
+<Project>
+  <!-- 建置前呼叫 .ps1 重組 README 共用的部份 -->
+  <Target Name="RebuildREADME" BeforeTargets="BeforeBuild">
+    <!--<Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(ProjectDir)BeforeBuild.ps1&quot;" />-->
+    <Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(SolutionDir)BeforeBuild.ps1&quot;" />
+  </Target>
+</Project>

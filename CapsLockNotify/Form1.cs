@@ -1,3 +1,4 @@
+using CapsLockNotify.Models;
 using System.ComponentModel;
 using Timer = System.Windows.Forms.Timer;
 namespace CapsLockNotify;

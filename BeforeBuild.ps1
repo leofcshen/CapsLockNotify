@@ -1,35 +1,35 @@
 function Invoke-BeforeBuild {
   param (
-    #[string]$CallerScriptFolder
+
   )
 
+  Write-Host "執行重建 README 作業開始"
 
-  #$ProjectFile = Get-ChildItem -Path $CallerScriptFolder -Filter *.csproj | Select-Object -First 1
-
-  Write-Host "執行前置作業..."
+  # 切換到專案根目錄
   cd ..
 
-  
-
   # 讀取要共用的 README 檔案內容
-  $mdShareContent = Get-Content -Path "./README.Share.md" -Raw
+  $readmeShare = Get-Content -Path "./README.Share.md" -Raw
 
-  Invoke-RebuildMD "README.md" $mdShareContent
-  Invoke-RebuildMD "README.zh-tw.md" $mdShareContent
+  Invoke-RebuildMD "README.md" $readmeShare
+  Invoke-RebuildMD "README.zh-tw.md" $readmeShare
+
+  Write-Host "執行重建 README 作業結束"
 }
 
 function Invoke-RebuildMD {
   param (
     [string]$fileName,
-    [string]$shareContent
+    [string]$readmeShare
   )
+  Write-Host "重建 $fileName 作業開始"
 
   # 讀取內容  
   $readmeText = Get-Content $fileName -Raw
   
   # 用正則取代 <!-- share_start --> 到 <!-- share_end --> 之間的內容
   $pattern = '(?s)(<!-- share_start -->).*?(<!-- share_end -->)'
-  $replacement = "`$1`n$shareContent`n`$2"
+  $replacement = "`$1`n$readmeShare`n`$2"
   $newReadme = [regex]::Replace($readmeText, $pattern, $replacement)
 
   # 統一行尾符號為 CRLF
@@ -40,4 +40,8 @@ function Invoke-RebuildMD {
   
   # 寫回檔案
   Set-Content $fileName -Value $newReadme
+
+  Write-Host "重建 $fileName 作業結束"
 }
+
+Invoke-BeforeBuild

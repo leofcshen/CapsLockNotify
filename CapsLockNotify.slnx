@@ -2,7 +2,8 @@
   <Folder Name="/方案項目/">
     <File Path=".editorconfig" />
     <File Path=".gitignore" />
-    <File Path="BeforeBuildBase.ps1" />
+    <File Path="BeforeBuild.ps1" />
+    <File Path="Directory.Build.targets" />
     <File Path="LICENSE" />
     <File Path="README.md" />
     <File Path="README.Share.md" />
