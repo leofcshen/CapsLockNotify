@@ -51,7 +51,7 @@
       DestinationFiles="$(PublishDir)$(NewExeName)" />
   </Target>
   
-  
+  <!-- 建置前呼叫 .ps1 重組 .md 共用的部份 -->
   <Target Name="RunBeforeBuild" BeforeTargets="BeforeBuild">
     <Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(ProjectDir)BeforeBuild.ps1&quot;" />
   </Target>
