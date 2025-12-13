@@ -1,7 +1,12 @@
 <Project>
-  <!-- 建置前呼叫 .ps1 重組 README 共用的部份 -->
+  <!-- BeforeBuild > 重建 README 共用的部份 -->
   <Target Name="RebuildREADME" BeforeTargets="BeforeBuild">
-    <!--<Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(ProjectDir)BeforeBuild.ps1&quot;" />-->
+    <Message Text="[BeforeBuild] RebuildREADME start" Importance="high" />    
+    <Message Text="[BeforeBuild] Project: $(MSBuildProjectName)" Importance="high" />
+    <Message Text="[BeforeBuild] targetFileName: $(MSBuildThisFile)" Importance="high" />
+    <Message Text="[BeforeBuild] configuration: $(Configuration)  " Importance="high" />
+    
     <Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(SolutionDir)BeforeBuild.ps1&quot;" />
+    <Message Text="[BeforeBuild]: RebuildREADME end" Importance="high" />
   </Target>
 </Project>
