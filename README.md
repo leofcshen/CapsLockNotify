@@ -1,6 +1,6 @@
 <!-- share_start -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/leofcshen/CapsLockNotify/main/CapsLockNotify/Resources/capslock_off.ico" alt="Logo" width="150" height="150" />
+  <img src="https://raw.githubusercontent.com/leofcshen/CapsLockNotify/main/CapsLockNotify/assets/icons/capslock_off.ico" alt="Logo" width="150" height="150" />
 </p>
 <h1 align="center">CapsLockNotify</h1>
 
@@ -13,7 +13,6 @@
 <a href="https://github.com/leofcshen/CapsLockNotify/issues"><img alt="Issues open" src="https://img.shields.io/github/issues-raw/leofcshen/CapsLockNotify?style=for-the-badge" height="20"/></a>
 <a href="https://github.com/leofcshen/CapsLockNotify/"><img alt="Last commit" src="https://img.shields.io/github/last-commit/leofcshen/CapsLockNotify?style=for-the-badge" height="20"/></a>
 <a href="https://github.com/leofcshen/CapsLockNotify/releases"><img alt="Latest version" src="https://img.shields.io/github/v/tag/leofcshen/CapsLockNotify?label=Latest%20Version&style=for-the-badge" height="20"/></a>
-<a href="https://github.com/leofcshen/CapsLockNotify/blob/main/LICENSE"><img alt="Latest version" src="https://img.shields.io/github/license/leofcshen/CapsLockNotify?style=for-the-badge" height="20"/></a>
 <!-- </p> -->
 
 <!-- share_end -->

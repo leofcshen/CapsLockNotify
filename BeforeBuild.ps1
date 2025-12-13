@@ -1,3 +1,8 @@
+param (
+  [string]$GithubOwner,
+  [string]$GithubRepo
+)
+
 function Invoke-BeforeBuild {
   param (
 
@@ -10,6 +15,10 @@ function Invoke-BeforeBuild {
 
   # 讀取要共用的 README 檔案內容
   $readmeShare = Get-Content -Path "./README.Share.md" -Raw
+  # 替換 GithubOwner
+  $readmeShare = $readmeShare.Replace("{{GithubOwner}}", $GithubOwner)
+  # 替換 GithubRepo
+  $readmeShare = $readmeShare.Replace("{{GithubRepo}}", $GithubRepo)
 
   Invoke-RebuildMD "README.md" $readmeShare
   Invoke-RebuildMD "README.zh-tw.md" $readmeShare

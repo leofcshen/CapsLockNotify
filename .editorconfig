@@ -4,6 +4,9 @@ root = true
 # comment 後的空格移不掉
 trim_trailing_whitespace = true
 
+[*]
+insert_final_newline = true
+
 # C# 檔案
 [*.cs]
 
@@ -279,3 +282,4 @@ dotnet_style_prefer_compound_assignment = true:suggestion
 dotnet_style_prefer_simplified_interpolation = true:suggestion
 dotnet_style_prefer_collection_expression = when_types_loosely_match:suggestion
 dotnet_style_namespace_match_folder = true:suggestion
+

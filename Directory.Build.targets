@@ -1,12 +1,20 @@
 <Project>
+  <PropertyGroup>
+    <GithubOwner>leofcshen</GithubOwner>
+    <GithubRepo>CapsLockNotify</GithubRepo>
+  </PropertyGroup>
+  
   <!-- BeforeBuild > 重建 README 共用的部份 -->
   <Target Name="RebuildREADME" BeforeTargets="BeforeBuild">
-    <Message Text="[BeforeBuild] RebuildREADME start" Importance="high" />    
+    <Message Text="[BeforeBuild] RebuildREADME start" Importance="high" />
     <Message Text="[BeforeBuild] Project: $(MSBuildProjectName)" Importance="high" />
     <Message Text="[BeforeBuild] targetFileName: $(MSBuildThisFile)" Importance="high" />
-    <Message Text="[BeforeBuild] configuration: $(Configuration)  " Importance="high" />
-    
-    <Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(SolutionDir)BeforeBuild.ps1&quot;" />
+    <Message Text="[BeforeBuild] configuration: $(Configuration)" Importance="high" />
+
+    <!--<Exec Command="powershell -ExecutionPolicy Bypass -File &quot;$(SolutionDir)BeforeBuild.ps1&quot;" />-->
+    <Exec Command='powershell -ExecutionPolicy Bypass -File "$(SolutionDir)BeforeBuild.ps1" -GithubOwner "$(GithubOwner)" -GithubRepo "$(GithubRepo)"' />
+
     <Message Text="[BeforeBuild]: RebuildREADME end" Importance="high" />
+
   </Target>
 </Project>
